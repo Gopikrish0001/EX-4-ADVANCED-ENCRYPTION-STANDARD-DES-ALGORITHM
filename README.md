@@ -11,7 +11,8 @@
   3. It has a fixed block size of 128 bits, and a key size of 128, 192, or 256 bits. 
   4. AES operates on a 4 × 4 column-major order array of bytes, termed the state
 
-## PROGRAM: 
+## PROGRAM:
+```
 
 #include <stdio.h>
 #include <string.h>
@@ -42,21 +43,17 @@ void printASCII(char *ciphertext) {
 
 int main() {
     char plaintext[100], key[100], ciphertext[100], decryptedText[100];
-
     printf("Enter the plaintext: ");
     scanf("%s", plaintext);
-
     printf("Enter the key: ");
     scanf("%s", key);
-
     simpleAESEncrypt(plaintext, key, ciphertext);
     printASCII(ciphertext);
-
     simpleAESDecrypt(ciphertext, key, decryptedText);
     printf("Decrypted Message: %s\n", decryptedText);
-
     return 0;
 }
+```
 ## OUTPUT:
 
 ![image](https://github.com/user-attachments/assets/612477e3-9009-45b5-aa8f-76a13c1e0261)
